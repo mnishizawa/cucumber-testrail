@@ -40,7 +40,7 @@ class TestRailApi
     url = @_generateUrl 'addPlanEntry'
     body =
       suite_id: @suite_config.suite_id
-      name: "CircleCI Automated Test Run #{@opts.runid} - #{(new Date()).toLocaleDateString()}"
+      name: "Automated Test Run #{@opts.runid} - #{(new Date()).toLocaleDateString()}"
       include_all: false
       case_ids: case_ids
     resp = yield @request_manager.send 'post', {url, body}

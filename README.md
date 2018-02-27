@@ -92,6 +92,21 @@ Setup on Your Project
 
 5) Merge tests and watch the update!
 
+
+Reporting via NPM
+-----------------
+If you use another CI tool or you just want the ability to run ad hoc, you can always add a new script to package.json
+and execute it via NPM anywhere.
+
+Add a new script package.json like:
+```json
+    "scripts": {
+        "test": "mkdir -p $CUCUMBER_TEST_REPORTS/cucumber && cucumber-js --format json:$CIRCLE_TEST_REPORTS/cucumber/tests.cucumber"
+        "report": "cucumber-testrail -c cucumber_testrail.yml -r $CUCUMBER_TEST_REPORTS/cucumber/tests.cucumber -u $TESTRAIL_USERNAME -p $TESTRAIL_PASSWORD"
+    }
+
+```
+
 FAQs
 --
 

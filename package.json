@@ -5,7 +5,7 @@
   "bin": {
     "cucumber-testrail": "bin/cucumber-testrail"
   },
-  "description": "Pushes Cucumber Results from CircleCI to TestRails",
+  "description": "Pushes Cucumber Results to TestRails",
   "dependencies": {
     "cli-table": "0.3.1",
     "co": "4.6.0",

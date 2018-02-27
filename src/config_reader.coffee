@@ -9,7 +9,7 @@ class ConfigReader
   constructor: (@config_file = {}) ->
 
   parse: -> 
-    config = require "../#{@config_file}"
+    config = require "#{@config_file}"
     config.suites = (config.suites?.map ({suite}) -> suite) or []
     @_validateConfig config
     config.symbols = config.suites.map ({project_symbol}) -> project_symbol

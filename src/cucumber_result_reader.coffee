@@ -25,7 +25,7 @@ class CucumberResultReader
 
   _examineScenario: (steps) ->
     status_id = TESTRAIL_STATUSES.PASSED
-    result = status_id: TESTRAIL_STATUSES.PASSED, comment: 'Passed on CircleCI!'
+    result = status_id: TESTRAIL_STATUSES.PASSED, comment: 'Automated Test Passed'
     steps.forEach (step) ->
       switch step.result.status
         when 'passed', 'skipped' then return
